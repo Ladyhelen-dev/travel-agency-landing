@@ -17,69 +17,96 @@
     />
     <!-- CSS file -->
     <link rel="stylesheet" href="style.css" />
+        <style>
+      .hero {
+        background: url('assets/web-2-1-4-v2-template/images/header.jpg') no-repeat center center/cover;
+        min-height: 100vh;
+      }
+      .booking-form input,
+      .booking-form select {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    </style>
   </head>
   <body>
-    <!-- HERO SECTION -->
-    <section class="hero text-white d-flex align-items-center" id="hero">
-      <div class="container text-center position-relative">
+
+    <!-- HERO SECTION with TOP NAV OVERLAY -->
+    <section class="hero text-white d-flex flex-column justify-content-start align-items-center" id="hero">
+<!-- TOP NAVIGATION BAR -->
+<header class="w-100 position-absolute top-0 z-3">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center py-3">
+      <div class="d-flex align-items-center">
         <img
           src="assets/web-2-1-4-v2-template/icons/search-white.svg"
           alt="Search"
-          width="20"
-          class="position-absolute top-0 start-0 m-3"
+          width="16"
+          class="me-2"
         />
+        <span class="small text-white">Search</span>
+      </div>
+      <div class="position-absolute start-50 translate-middle-x">
         <img
           src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
           alt="Globe"
-          width="20"
-          class="position-absolute top-0 start-50 translate-middle-x m-3"
+          width="24"
         />
+      </div>
+      <div class="d-flex align-items-center">
+        <a href="destinations.html" class="text-white text-decoration-none small me-3">Destinations</a>
+        <a href="contact.html" class="text-white text-decoration-none small me-3">Contact</a>
+        <button class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2">
+          Sign in
+        </button>
+      </div>
+    </div>
+    <!-- SINGLE THIN LINE BELOW NAV -->
+    <hr
+      class="border-top border-white opacity-50 m-0"
+      style="height: 1px"
+    />
+  </div>
+</header>
 
-        <!-- Navigation top-right (Destinations, Sign in) -->
-        <div class="position-absolute top-0 end-0 m-3">
-          <a href="#" class="text-white text-decoration-none me-3"
-            >Destinations</a
-          >
-          <button class="btn btn-outline-light btn-sm">Sign in</button>
+          
+      <!-- Hero Content + Form at Bottom Left -->
+      <div class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3">
+        <div class="text-white d-flex flex-column align-items-start gap-4">
+          <div>
+            <p class="text-uppercase small mb-1">YEAR LONG TRAVEL</p>
+            <h1 class="display-4 mb-0" style="font-family: 'Dancing Script', cursive;">Book your next destination</h1>
+          </div>
+          <form class="booking-form d-flex flex-wrap flex-md-nowrap gap-3 align-items-end">
+            <div>
+              <label class="form-label">Destination</label>
+              <select class="form-select">
+                <option selected>Select destination</option>
+                <option>Paris, France</option>
+                <option>San Francisco, USA</option>
+                <option>Sydney, Australia</option>
+                <option>Tokyo, Japan</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">From</label>
+              <input type="date" class="form-control" />
+            </div>
+            <div>
+              <label class="form-label">To</label>
+              <input type="date" class="form-control" />
+            </div>
+            <div>
+              <label class="form-label">Guests</label>
+              <input type="number" class="form-control" value="2" min="1" />
+            </div>
+            <div>
+              <label class="form-label invisible">Search</label>
+              <button type="submit" class="btn btn-warning px-3">
+                <img src="assets/web-2-1-4-v2-template/icons/arrow-right.svg" alt="Arrow" width="20" />
+              </button>
+            </div>
+          </form>
         </div>
-
-        <p class="lead text-uppercase">Year long travel</p>
-        <h1 class="mb-4 display-4">Book your next destination</h1>
-
-        <form class="row g-2 justify-content-center">
-          <!-- Destination Dropdown -->
-          <div class="col-12 col-md-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Select destination"
-              required
-            />
-          </div>
-          <!-- From Date -->
-          <div class="col-6 col-md-2">
-            <input type="date" class="form-control" required />
-          </div>
-          <!-- To Date -->
-          <div class="col-6 col-md-2">
-            <input type="date" class="form-control" required />
-          </div>
-          <!-- Guests -->
-          <div class="col-6 col-md-2">
-            <input
-              type="number"
-              class="form-control"
-              min="1"
-              max="10"
-              placeholder="2"
-              required
-            />
-          </div>
-          <!-- Search Button -->
-          <div class="col-6 col-md-1">
-            <button type="submit" class="btn btn-warning w-100">→</button>
-          </div>
-        </form>
       </div>
     </section>
 
@@ -87,10 +114,10 @@
     <section class="destinations py-5">
       <div class="container">
         <h2 class="mb-4">Destinations</h2>
-        <p>
+        <p class=""mb-4">
           Lorem ipsum dolor sit amet, adventure travel mountains, beach resorts
           and cultural experiences await. Pack your bags and get ready to
-          explore the world! From bustling cities to tranquil countryside
+          <strong>explore the world!</strong> From bustling cities to tranquil countryside
           getaways, there's a destination for every type of traveler.
         </p>
         <p>
@@ -102,7 +129,7 @@
           world-famous restaurants.
         </p>
         <p>
-          For those seeking a bit of relaxation, head to the spas and resorts of
+          For those seeking a bit of relaxation, <strong>head to the spas</strong> and resorts of
           the English countryside. Indulge in a luxurious massage or take a dip
           in a hot spring. If you're looking for something a bit more active,
           strap on your hiking boots and tackle the rugged trails of the coastal
@@ -111,36 +138,41 @@
           fermentum augu.
         </p>
         <div class="row g-3 mt-4">
-          <div class="col-12 col-md-6">
-            <img
-              src="assets/web-2-1-4-v2-template/images/destinations/paris.jpg"
-              alt="Paris, France"
-              class="img-fluid rounded"
-            />
-            <div class="destination-overlay">
-              <h5 class="card-title">Paris</h5>
-              <p class="card-text">France</p>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-white border-0 overflow-hidden">
+              <img src="assets/web-2-1-4-v2-template/images/destinations/paris.jpg" class="card-img" alt="Paris">
+              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+                <h5 class="card-title">Paris</h5>
+                <p class="card-text">France</p>
+              </div>
             </div>
-          <div class="col-12 col-md-6">
-            <img
-              src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg"
-              alt="SF, USA"
-              class="img-fluid rounded"
-            />
           </div>
-          <div class="col-12 col-md-6">
-            <img
-              src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg"
-              alt="Sydney, Australia"
-              class="img-fluid rounded"
-            />
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-white border-0 overflow-hidden">
+              <img src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg" class="card-img" alt="San Francisco">
+              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+                <h5 class="card-title">San Francisco</h5>
+                <p class="card-text">United States</p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-md-6">
-            <img
-              src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg"
-              alt="Tokyo, Japan"
-              class="img-fluid rounded"
-            />
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-white border-0 overflow-hidden">
+              <img src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg" class="card-img" alt="Sydney">
+              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+                <h5 class="card-title">Sydney</h5>
+                <p class="card-text">Australia</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-white border-0 overflow-hidden">
+              <img src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg" class="card-img" alt="Tokyo">
+              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+                <h5 class="card-title">Tokyo</h5>
+                <p class="card-text">Japan</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -153,32 +185,17 @@
           <div class="col-md-6 mb-3">
             <h5>Links</h5>
             <ul class="list-unstyled">
-              <li>
-                <a href="#hero" class="text-dark text-decoration-none">Home</a>
-              </li>
-              <li>
-                <a href="#" class="text-dark text-decoration-none"
-                  >Destinations</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-dark text-decoration-none">About</a>
-              </li>
-              <li>
-                <a href="#" class="text-dark text-decoration-none">Contact</a>
-              </li>
+              <li><a href="#hero" class="text-dark text-decoration-underline">Home</a></li>
+              <li><a href="#" class="text-dark text-decoration-underline">Destinations</a></li>
+              <li><a href="#" class="text-dark text-decoration-underline">About</a></li>
+              <li><a href="#" class="text-dark text-decoration-underline">Contact</a></li>
             </ul>
           </div>
           <div class="col-md-6">
             <h5>Newsletter</h5>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl nec tincidunt dapibus.</p>
             <form class="d-flex">
-              <input
-                type="email"
-                class="form-control me-2"
-                placeholder="Email"
-                required
-              />
+              <input type="email" class="form-control me-2" placeholder="Email" required />
               <button class="btn btn-success">Subscribe</button>
             </form>
           </div>

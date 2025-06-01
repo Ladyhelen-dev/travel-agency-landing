@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .destination-card {
+        position: relative;
+        overflow: hidden;
+        border: none;
+      }
+
+      .destination-card img {
+        transition: transform 0.3s ease;
+      }
+
+      .destination-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.75);
+      }
+
+      .destination-card .card-img-overlay {
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s ease;
+      }
+
+      .destination-card:hover .card-img-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .clickable {
+        cursor: pointer;
+      }
+
+      .card-wrapper {
+        height: 300px;
+      }
+
+      .destination-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO SECTION with TOP NAV OVERLAY -->
+    <section
+      class="hero text-white d-flex flex-column justify-content-start align-items-center"
+      id="hero"
+      style="
+        background: url('assets/web-2-1-4-v2-template/images/ahmad-hidayat-SSjwFt0vBH0-unsplash.jpg')
+          no-repeat center center/cover;
+        min-height: 100vh;
+      "
+    >
+      <!-- TOP NAVIGATION BAR -->
+      <header class="w-100 position-absolute top-0 z-3">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center py-3">
+            <div class="d-flex align-items-center">
+              <img
+                src="assets/web-2-1-4-v2-template/icons/search-white.svg"
+                alt="Search"
+                width="16"
+                class="me-2"
+              />
+              <span class="small text-white">Search</span>
+            </div>
+            <div class="position-absolute start-50 translate-middle-x">
+              <img
+                src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
+                alt="Globe"
+                width="24"
+              />
+            </div>
+            <div class="d-flex align-items-center">
+              <a
+                href="destinations.html"
+                class="text-white text-decoration-none small me-3"
+                >Destinations</a
+              >
+              <a
+                href="contact.html"
+                class="text-white text-decoration-none small me-3"
+                >Contact</a
+              >
+              <button
+                class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2"
+              >
+                Sign in
+              </button>
+            </div>
+          </div>
+          <!-- SINGLE THIN LINE BELOW NAV -->
+          <hr
+            class="border-top border-white opacity-50 m-0"
+            style="height: 1px"
+          />
+        </div>
+      </header>
+
+      <!-- Hero Content + Form at Bottom Left -->
+      <div
+        class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3"
+      >
+        <div class="text-white d-flex flex-column align-items-start gap-4">
+          <div>
+            <p class="text-uppercase small mb-1">DISCOVER THE WORLD</p>
+            <h1
+              class="display-4 mb-0"
+              style="font-family: 'Dancing Script', cursive"
+            >
+              Explore Our Destinations
+            </h1>
+            <p class="lead">
+              12 curated locations across the globe waiting for you.
+            </p>
+          </div>
+          <form
+            class="booking-form d-flex flex-wrap flex-md-nowrap gap-3 align-items-end"
+          ></form>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATION GALLERY -->
+    <!-- DESTINATION GALLERY -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- First Destination (Clickable) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <a
+                href="destination-individual.html"
+                class="text-decoration-none h-100 d-block"
+              >
+                <div class="card text-white destination-card clickable h-100">
+                  <img
+                    src="assets/web-2-1-4-v2-template/images/destinations/paris.jpg"
+                    class="card-img"
+                    alt="Paris"
+                  />
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                  >
+                    <h5 class="card-title">Paris</h5>
+                    <p class="card-text">France</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Remaining 11 Destinations (Not Clickable) -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg"
+                  class="card-img"
+                  alt="San Francisco"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">San Francisco</h5>
+                  <p class="card-text">USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat for each destination below -->
+          <!-- All cards wrapped in .card-wrapper with height: 300px -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg"
+                  class="card-img"
+                  alt="Sydney"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Sydney</h5>
+                  <p class="card-text">Australia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg"
+                  class="card-img"
+                  alt="Tokyo"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Tokyo</h5>
+                  <p class="card-text">Japan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/alex-block-jAj5yVH8Ooc-unsplash.jpg"
+                  class="card-img"
+                  alt="London"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">London</h5>
+                  <p class="card-text">UK</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/capetown-rowen-smith-fVFBewuS_mg-unsplash.jpg"
+                  class="card-img"
+                  alt="Cape Town"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Cape Town</h5>
+                  <p class="card-text">South Africa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/alejandro-cartagena-qeibBI7w4fQ-unsplash.jpg"
+                  class="card-img"
+                  alt="Bangkok"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Bangkok</h5>
+                  <p class="card-text">Thailand</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/destinations/rome-jorgen-hendriksen-RNkEeWhRT7k-unsplash.jpg"
+                  class="card-img"
+                  alt="Rome"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Rome</h5>
+                  <p class="card-text">Italy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/lagos-kF0-RhpHhRA-unsplash.jpg"
+                  class="card-img"
+                  alt="Lagos"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Lagos</h5>
+                  <p class="card-text">Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/christoph-schulz-7tb-b37yHx4-unsplash.jpg"
+                  class="card-img"
+                  alt="Dubai"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Dubai</h5>
+                  <p class="card-text">UAE</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/theodor-vasile-LSscVPEyQpI-unsplash.jpg"
+                  class="card-img"
+                  alt="Amsterdam"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Amsterdam</h5>
+                  <p class="card-text">Netherlands</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card-wrapper" style="height: 300px">
+              <div class="card text-white destination-card h-100">
+                <img
+                  src="assets/web-2-1-4-v2-template/images/matheo-jbt-KraZK-NLCq0-unsplash.jpg"
+                  class="card-img"
+                  alt="Barcelona"
+                />
+                <div
+                  class="card-img-overlay d-flex flex-column justify-content-end p-3"
+                >
+                  <h5 class="card-title">Barcelona</h5>
+                  <p class="card-text">Spain</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-warning text-dark py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a
+                  href="index.html#hero"
+                  class="text-dark text-decoration-underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-dark text-decoration-underline"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-dark text-decoration-underline"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-dark text-decoration-underline"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Newsletter</h5>
+            <p>
+              Subscribe to get travel deals, updates, and inspiration straight
+              to your inbox.
+            </p>
+            <form class="d-flex">
+              <input
+                type="email"
+                class="form-control me-2"
+                placeholder="Email"
+                required
+              />
+              <button class="btn btn-success">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
