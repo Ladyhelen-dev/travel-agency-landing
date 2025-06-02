@@ -45,106 +45,104 @@
         cursor: pointer;
       }
 
-      .card-wrapper {
-        height: 300px;
-      }
-
-      .destination-card img {
+      .card-img {
         height: 100%;
         width: 100%;
         object-fit: cover;
       }
-    </style>
-  </head>
-  <body>
-    <!-- HERO SECTION with TOP NAV OVERLAY -->
-    <section
-      class="hero text-white d-flex flex-column justify-content-start align-items-center"
-      id="hero"
-      style="
-        background: url('assets/web-2-1-4-v2-template/images/ahmad-hidayat-SSjwFt0vBH0-unsplash.jpg')
-          no-repeat center center/cover;
-        min-height: 100vh;
-      "
-    >
-      <!-- TOP NAVIGATION BAR -->
-      <header class="w-100 position-absolute top-0 z-3">
-        <div class="container">
-          <div class="d-flex justify-content-between align-items-center py-3">
-            <div class="d-flex align-items-center">
-              <img
-                src="assets/web-2-1-4-v2-template/icons/search-white.svg"
-                alt="Search"
-                width="16"
-                class="me-2"
-              />
-              <span class="small text-white">Search</span>
-            </div>
-            <div class="position-absolute start-50 translate-middle-x">
-              <img
-                src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
-                alt="Globe"
-                width="24"
-              />
-            </div>
-            <div class="d-flex align-items-center">
-              <a
-                href="destinations.html"
-                class="text-white text-decoration-none small me-3"
-                >Destinations</a
-              >
-              <a
-                href="contact.html"
-                class="text-white text-decoration-none small me-3"
-                >Contact</a
-              >
-              <button
-                class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2"
-              >
-                Sign in
-              </button>
-            </div>
-          </div>
-          <!-- SINGLE THIN LINE BELOW NAV -->
-          <hr
-            class="border-top border-white opacity-50 m-0"
-            style="height: 1px"
-          />
-        </div>
-      </header>
 
-      <!-- Hero Content + Form at Bottom Left -->
+      .card-img-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: background-color 0.3s ease;
+      }
+    </style>
+    </head>
+    <body>
+      <!-- HERO SECTION -->
+      <section
+        class="hero text-white d-flex flex-column justify-content-start align-items-center position-relative"
+        id="hero"
+        style="
+          background: url('assets/web-2-1-4-v2-template/images/ahmad-hidayat-SSjwFt0vBH0-unsplash.jpg')
+            no-repeat center center/cover;
+          min-height: 100vh;
+        "
+      >
+        <!-- TOP NAVIGATION BAR -->
+        <header class="w-100 position-absolute top-0 start-0 z-3">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+              <!-- Left side: Search -->
+              <div class="d-flex align-items-center">
+                <img
+                  src="assets/web-2-1-4-v2-template/icons/search-white.svg"
+                  alt="Search"
+                  width="16"
+                  class="me-2"
+                />
+                <span class="small text-white">Search</span>
+              </div>
+
+              <!-- Center: Globe icon -->
+              <div class="position-absolute start-50 translate-middle-x">
+                <img
+                  src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
+                  alt="Globe"
+                  width="24"
+                />
+              </div>
+
+              <!-- Right side: Nav links + button -->
+              <div class="d-flex align-items-center">
+                <a
+                  href="destinations.html"
+                  class="text-white text-decoration-none small me-3"
+                  >Destinations</a
+                >
+                <a
+                  href="contact.html"
+                  class="text-white text-decoration-none small me-3"
+                  >Contact</a
+                >
+                <button
+                  class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2"
+                >
+                  Sign in
+                </button>
+              </div>
+            </div>
+
+            <hr
+              class="border-top border-white opacity-50 m-0"
+              style="height: 1px"
+            />
+          </div>
+        </header>
+      </section>
+
+      <!-- HERO TEXT (similar structure) -->
       <div
         class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3"
       >
-        <div class="text-white d-flex flex-column align-items-start gap-4">
-          <div>
-            <p class="text-uppercase small mb-1">DISCOVER THE WORLD</p>
-            <h1
-              class="display-4 mb-0"
-              style="font-family: 'Dancing Script', cursive"
-            >
-              Explore Our Destinations
-            </h1>
-            <p class="lead">
-              12 curated locations across the globe waiting for you.
-            </p>
+        <div class="text-white d-flex flex-column align-items-start gap-1">
+          <div class="hero-text">
+            <p>DISCOVER THE WORLD</p>
+            <h1>Explore Our Destinations</h1>
           </div>
-          <form
-            class="booking-form d-flex flex-wrap flex-md-nowrap gap-3 align-items-end"
-          ></form>
         </div>
       </div>
     </section>
 
-    <!-- DESTINATION GALLERY -->
     <!-- DESTINATION GALLERY -->
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
           <!-- First Destination (Clickable) -->
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <a
                 href="destination-individual.html"
                 class="text-decoration-none h-100 d-block"
@@ -166,9 +164,9 @@
             </div>
           </div>
 
-          <!-- Remaining 11 Destinations (Not Clickable) -->
+          <!-- The rest (11) destination cards -->
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg"
@@ -185,10 +183,8 @@
             </div>
           </div>
 
-          <!-- Repeat for each destination below -->
-          <!-- All cards wrapped in .card-wrapper with height: 300px -->
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg"
@@ -206,7 +202,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg"
@@ -224,7 +220,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/alex-block-jAj5yVH8Ooc-unsplash.jpg"
@@ -242,7 +238,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/capetown-rowen-smith-fVFBewuS_mg-unsplash.jpg"
@@ -260,7 +256,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/alejandro-cartagena-qeibBI7w4fQ-unsplash.jpg"
@@ -278,7 +274,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/destinations/rome-jorgen-hendriksen-RNkEeWhRT7k-unsplash.jpg"
@@ -296,7 +292,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/lagos-kF0-RhpHhRA-unsplash.jpg"
@@ -314,7 +310,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/christoph-schulz-7tb-b37yHx4-unsplash.jpg"
@@ -332,7 +328,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/theodor-vasile-LSscVPEyQpI-unsplash.jpg"
@@ -350,7 +346,7 @@
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card-wrapper" style="height: 300px">
+            <div class="card-wrapper" style="height: 420px">
               <div class="card text-white destination-card h-100">
                 <img
                   src="assets/web-2-1-4-v2-template/images/matheo-jbt-KraZK-NLCq0-unsplash.jpg"
@@ -370,7 +366,7 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER SECTION -->
     <footer class="bg-warning text-dark py-4">
       <div class="container">
         <div class="row">
@@ -378,9 +374,7 @@
             <h5>Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a
-                  href="index.html#hero"
-                  class="text-dark text-decoration-underline"
+                <a href="index.html" class="text-dark text-decoration-underline"
                   >Home</a
                 >
               </li>
@@ -408,8 +402,8 @@
           <div class="col-md-6">
             <h5>Newsletter</h5>
             <p>
-              Subscribe to get travel deals, updates, and inspiration straight
-              to your inbox.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              euismod, nisl nec tincidunt dapibus.
             </p>
             <form class="d-flex">
               <input

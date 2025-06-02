@@ -12,71 +12,108 @@
     />
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Dancing+Script&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
     <!-- CSS file -->
     <link rel="stylesheet" href="style.css" />
-        <style>
-      .hero {
-        background: url('assets/web-2-1-4-v2-template/images/header.jpg') no-repeat center center/cover;
-        min-height: 100vh;
-      }
-      .booking-form input,
-      .booking-form select {
-        background-color: rgba(255, 255, 255, 0.9);
-      }
-    </style>
   </head>
   <body>
-
     <!-- HERO SECTION with TOP NAV OVERLAY -->
-    <section class="hero text-white d-flex flex-column justify-content-start align-items-center" id="hero">
-<!-- TOP NAVIGATION BAR -->
-<header class="w-100 position-absolute top-0 z-3">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center py-3">
-      <div class="d-flex align-items-center">
-        <img
-          src="assets/web-2-1-4-v2-template/icons/search-white.svg"
-          alt="Search"
-          width="16"
-          class="me-2"
-        />
-        <span class="small text-white">Search</span>
-      </div>
-      <div class="position-absolute start-50 translate-middle-x">
-        <img
-          src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
-          alt="Globe"
-          width="24"
-        />
-      </div>
-      <div class="d-flex align-items-center">
-        <a href="destinations.html" class="text-white text-decoration-none small me-3">Destinations</a>
-        <a href="contact.html" class="text-white text-decoration-none small me-3">Contact</a>
-        <button class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2">
-          Sign in
-        </button>
-      </div>
-    </div>
-    <!-- SINGLE THIN LINE BELOW NAV -->
-    <hr
-      class="border-top border-white opacity-50 m-0"
-      style="height: 1px"
-    />
-  </div>
-</header>
+    <section
+      class="hero text-white d-flex flex-column justify-content-start align-items-center"
+      id="hero"
+    >
+      <!-- TOP NAVIGATION BAR -->
+      <header class="w-100 position-absolute top-0 z-3">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark py-3 px-0">
+            <div class="container-fluid px-0">
+              <!-- Left: Search -->
+              <div class="d-flex align-items-center">
+                <img
+                  src="assets/web-2-1-4-v2-template/icons/search-white.svg"
+                  alt="Search"
+                  width="16"
+                  class="me-2"
+                />
+                <span class="small text-white">Search</span>
+              </div>
 
-          
-      <!-- Hero Content + Form at Bottom Left -->
-      <div class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3">
-        <div class="text-white d-flex flex-column align-items-start gap-4">
-          <div>
-            <p class="text-uppercase small mb-1">YEAR LONG TRAVEL</p>
-            <h1 class="display-4 mb-0" style="font-family: 'Dancing Script', cursive;">Book your next destination</h1>
+              <!-- Center: Globe (visible only on large screens) -->
+              <div
+                class="position-absolute start-50 translate-middle-x d-none d-lg-block"
+              >
+                <img
+                  src="assets/web-2-1-4-v2-template/icons/globe-white.svg"
+                  alt="Globe"
+                  width="24"
+                />
+              </div>
+
+              <!-- Toggler -->
+              <button
+                class="navbar-toggler ms-auto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Links -->
+              <div
+                class="collapse navbar-collapse justify-content-end"
+                id="mainNav"
+              >
+                <ul class="navbar-nav align-items-lg-center gap-2 gap-lg-0">
+                  <li class="nav-item">
+                    <a
+                      href="destinations.html"
+                      class="nav-link text-white small"
+                      >Destinations</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact.html" class="nav-link text-white small"
+                      >Contact</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="btn btn-light btn-sm rounded-pill px-3 py-1 border-2"
+                    >
+                      Sign in
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <hr
+            class="border-top border-white opacity-50 m-0"
+            style="height: 1px"
+          />
+        </div>
+      </header>
+
+      <!-- Hero Text + Booking Form -->
+      <div
+        class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3"
+        style="z-index: 2"
+      >
+        <div class="text-white d-flex flex-column align-items-start gap-1">
+          <div class="hero-text">
+            <p>YEAR LONG TRAVEL</p>
+            <h1>Book your next <br />destination</h1>
           </div>
-          <form class="booking-form d-flex flex-wrap flex-md-nowrap gap-3 align-items-end">
+
+          <form
+            class="booking-form d-flex flex-wrap flex-md-nowrap gap-3 align-items-start"
+          >
             <div>
               <label class="form-label">Destination</label>
               <select class="form-select">
@@ -102,7 +139,11 @@
             <div>
               <label class="form-label invisible">Search</label>
               <button type="submit" class="btn btn-warning px-3">
-                <img src="assets/web-2-1-4-v2-template/icons/arrow-right.svg" alt="Arrow" width="20" />
+                <img
+                  src="assets/web-2-1-4-v2-template/icons/arrow-right.svg"
+                  alt="Arrow"
+                  width="20"
+                />
               </button>
             </div>
           </form>
@@ -114,34 +155,50 @@
     <section class="destinations py-5">
       <div class="container">
         <h2 class="mb-4">Destinations</h2>
-        <p class=""mb-4">
-          Lorem ipsum dolor sit amet, adventure travel mountains, beach resorts
-          and cultural experiences await. Pack your bags and get ready to
-          <strong>explore the world!</strong> From bustling cities to tranquil countryside
-          getaways, there's a destination for every type of traveler.
-        </p>
-        <p>
-          If you're a culture lover, the historic cities of London and Edinburgh
-          should be at the top of your list. Walk the streets of London's West
-          End, marvel at the architecture of Big Ben and Buckingham Palace, and
-          take in a show at the Globe Theatre. In Edinburgh, visit the Royal
-          Mile, explore the castle, and sample the local fare at the city's
-          world-famous restaurants.
-        </p>
-        <p>
-          For those seeking a bit of relaxation, <strong>head to the spas</strong> and resorts of
-          the English countryside. Indulge in a luxurious massage or take a dip
-          in a hot spring. If you're looking for something a bit more active,
-          strap on your hiking boots and tackle the rugged trails of the coastal
-          cliffs. Newsletter Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla euismod, nisl nec tincidunt dapibus, magna libero
-          fermentum augu.
-        </p>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <p>
+              Lorem ipsum dolor sit amet, adventure travel mountains, beach
+              resorts and cultural experiences await. Pack your bags and get
+              ready to
+              <strong>explore the world!</strong> From bustling cities to
+              tranquil countryside getaways, there's a destination for every
+              type of traveler.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              If you're a culture lover, the <em>historic cities</em> of London
+              and Edinburgh should be at the top of your list. Walk the streets
+              of London's West End, marvel at the architecture of Big Ben and
+              Buckingham Palace, and take in a show at the Globe Theatre. In
+              Edinburgh, visit the Royal Mile, explore the castle, and sample
+              the local fare at the city's world-famous restaurants.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              For those seeking a bit of relaxation,
+              <strong>head to the spas</strong> and resorts of the English
+              countryside. Indulge in a luxurious massage or take a dip in a hot
+              spring. If you're looking for something a bit more active, strap
+              on your hiking boots and tackle the rugged trails of the coastal
+              cliffs.
+            </p>
+          </div>
+        </div>
+
         <div class="row g-3 mt-4">
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card text-white border-0 overflow-hidden">
-              <img src="assets/web-2-1-4-v2-template/images/destinations/paris.jpg" class="card-img" alt="Paris">
-              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+              <img
+                src="assets/web-2-1-4-v2-template/images/destinations/paris.jpg"
+                class="card-img"
+                alt="Paris"
+              />
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3"
+              >
                 <h5 class="card-title">Paris</h5>
                 <p class="card-text">France</p>
               </div>
@@ -149,8 +206,14 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card text-white border-0 overflow-hidden">
-              <img src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg" class="card-img" alt="San Francisco">
-              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+              <img
+                src="assets/web-2-1-4-v2-template/images/destinations/san-francisco.jpg"
+                class="card-img"
+                alt="San Francisco"
+              />
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3"
+              >
                 <h5 class="card-title">San Francisco</h5>
                 <p class="card-text">United States</p>
               </div>
@@ -158,8 +221,14 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card text-white border-0 overflow-hidden">
-              <img src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg" class="card-img" alt="Sydney">
-              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+              <img
+                src="assets/web-2-1-4-v2-template/images/destinations/sydney.jpg"
+                class="card-img"
+                alt="Sydney"
+              />
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3"
+              >
                 <h5 class="card-title">Sydney</h5>
                 <p class="card-text">Australia</p>
               </div>
@@ -167,8 +236,14 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3">
             <div class="card text-white border-0 overflow-hidden">
-              <img src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg" class="card-img" alt="Tokyo">
-              <div class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3">
+              <img
+                src="assets/web-2-1-4-v2-template/images/destinations/tokyo.jpg"
+                class="card-img"
+                alt="Tokyo"
+              />
+              <div
+                class="card-img-overlay d-flex flex-column justify-content-end bg-dark bg-opacity-50 p-3"
+              >
                 <h5 class="card-title">Tokyo</h5>
                 <p class="card-text">Japan</p>
               </div>
@@ -185,17 +260,45 @@
           <div class="col-md-6 mb-3">
             <h5>Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#hero" class="text-dark text-decoration-underline">Home</a></li>
-              <li><a href="#" class="text-dark text-decoration-underline">Destinations</a></li>
-              <li><a href="#" class="text-dark text-decoration-underline">About</a></li>
-              <li><a href="#" class="text-dark text-decoration-underline">Contact</a></li>
+              <li>
+                <a href="#hero" class="text-dark text-decoration-underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="destinations.html"
+                  class="text-dark text-decoration-underline"
+                  >Destinations</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-dark text-decoration-underline"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-dark text-decoration-underline"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-6">
             <h5>Newsletter</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl nec tincidunt dapibus.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              euismod, nisl nec tincidunt dapibus.
+            </p>
             <form class="d-flex">
-              <input type="email" class="form-control me-2" placeholder="Email" required />
+              <input
+                type="email"
+                class="form-control me-2"
+                placeholder="Email"
+                required
+              />
               <button class="btn btn-success">Subscribe</button>
             </form>
           </div>

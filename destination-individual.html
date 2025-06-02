@@ -25,7 +25,7 @@
       style="
         background: url('assets/web-2-1-4-v2-template/images/paris2-getty-images-AofcIDFaraI-unsplash.jpg')
           no-repeat center center/cover;
-        min-height: 60vh;
+        min-height: 100vh;
       "
     >
       <!-- TOP NAVIGATION BAR -->
@@ -77,15 +77,19 @@
       <div
         class="container h-100 d-flex flex-column justify-content-end pb-5 w-100 position-absolute top-0 z-3"
       >
-        <div class="text-white d-flex flex-column align-items-start gap-4">
-          <div>
-            <p class="text-uppercase small mb-1">DESTINATIONS</p>
-            <h1
-              class="display-4 mb-0"
-              style="font-family: 'Dancing Script', cursive"
-            >
-              Paris
-            </h1>
+        <div class="row">
+          <div
+            class="col-md-6 text-white d-flex flex-column align-items-start gap-4"
+          >
+            <div>
+              <p class="text-uppercase small mb-1">DESTINATIONS</p>
+              <h1
+                class="display-4 mb-0"
+                style="font-family: 'Dancing Script', cursive"
+              >
+                Paris
+              </h1>
+            </div>
           </div>
         </div>
       </div>
@@ -94,82 +98,77 @@
     <!-- DESTINATION DETAILS -->
     <section class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2 class="mb-3">Explore the City of Light</h2>
+        <!-- Back to Destinations Link -->
+        <div class="mb-4">
+          <a
+            href="destinations.html"
+            class="text-dark text-decoration-underline"
+          >
+            ← Back to Destinations
+          </a>
+        </div>
+        <h2 class="mb-4">Explore the City of Light</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
             <p>
               Paris is the beating heart of France — a city where romance meets
               grandeur. Walk through cobbled alleys and monumental boulevards,
               feel the timeless charm of café culture, and bask in the artistic
               legacy housed in galleries and architecture alike.
             </p>
+          </div>
+          <div class="col-md-4">
             <p>
               Whether you're standing under the Eiffel Tower or strolling
               through Montmartre, every corner holds a story. Dine on
               world-class cuisine, admire haute couture, or simply enjoy the
               rhythm of a city that knows how to live.
             </p>
+          </div>
+          <div class="col-md-4">
             <p>
               This isn't just a trip — it's an invitation to be transformed by
               culture, cuisine, and charm. Paris awaits your footsteps. Let's
               make it happen.
             </p>
-
-            <!-- Back to Destinations Link -->
-            <div class="text-center my-4">
-              <a
-                href="destinations.html"
-                class="btn btn-outline-dark rounded-pill px-4 py-2"
-              >
-                ← Back to Destinations
-              </a>
-            </div>
-
-            <!-- Booking Form -->
-            <h2 class="h4 mt-5 mb-4">Book Your Trip</h2>
-            <form class="row g-3">
-              <div class="col-md-6">
-                <label for="fullName" class="form-label">Full Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="fullName"
-                  required
-                />
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required />
-              </div>
-              <div class="col-md-6">
-                <label for="checkin" class="form-label">Check-In</label>
-                <input type="date" class="form-control" id="checkin" required />
-              </div>
-              <div class="col-md-6">
-                <label for="checkout" class="form-label">Check-Out</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="checkout"
-                  required
-                />
-              </div>
-              <div class="col-12">
-                <label for="notes" class="form-label">Additional Notes</label>
-                <textarea class="form-control" id="notes" rows="3"></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-warning px-4">
-                  Submit Booking
-                </button>
-              </div>
-            </form>
           </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="mt-5">
+          <h2 class="h4 mb-4">Book Your Trip</h2>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="fullName" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="col-md-6">
+              <label for="checkin" class="form-label">Check-In</label>
+              <input type="date" class="form-control" id="checkin" required />
+            </div>
+            <div class="col-md-6">
+              <label for="checkout" class="form-label">Check-Out</label>
+              <input type="date" class="form-control" id="checkout" required />
+            </div>
+            <div class="col-12">
+              <label for="notes" class="form-label">Additional Notes</label>
+              <textarea class="form-control" id="notes" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-warning px-4">
+                Submit Booking
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER SECTION -->
     <footer class="bg-warning text-dark py-4">
       <div class="container">
         <div class="row">
@@ -177,9 +176,7 @@
             <h5>Links</h5>
             <ul class="list-unstyled">
               <li>
-                <a
-                  href="index.html#hero"
-                  class="text-dark text-decoration-underline"
+                <a href="index.html" class="text-dark text-decoration-underline"
                   >Home</a
                 >
               </li>
@@ -207,8 +204,8 @@
           <div class="col-md-6">
             <h5>Newsletter</h5>
             <p>
-              Subscribe for deals, updates, and inspiration straight to your
-              inbox.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              euismod, nisl nec tincidunt dapibus.
             </p>
             <form class="d-flex">
               <input
